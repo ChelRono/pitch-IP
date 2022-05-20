@@ -1,14 +1,17 @@
 {% extends "layout.html" %}
+{% extends 'bootstrap/base.html'%}
+
+
 {% block content %}
     {% for pitch in pitches %}
     <article class="media content-section">
         <div class="media-body">
           <div class="article-metadata">
             <a class="mr-2" href="#">{{ pitch.author }}</a>
-            <small class="text-muted">{{ pitch.date_posted }}</small>
+            <small class="text-muted">{{ pitch.category }}</small>
           </div>
-          <h2><a class="article-title" href="#">{{ pitch.category }}</a></h2>
-          <p class="article-content">{{ pitch.content }}</p>
+          <h2><a class="article-title" href="#">{{ pitch.content }}</a></h2>
+          <p class="article-content">{{ pitch.postedAt }}</p>
         </div>
       </article>
     

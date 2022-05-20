@@ -1,6 +1,6 @@
 import unittest
 from models import pitch
-Pitch = pitch.pitch
+Pitch = pitch.Pitch
 
 class PitchTest(unittest.TestCase):
     '''
@@ -11,10 +11,10 @@ class PitchTest(unittest.TestCase):
         '''
         Set up method that will run before every Test
         '''
-        self.new_pitch = Movie('Valarie Rono','pickup-lines','I must be in a museum, because you truly are a work of art.','September 3rd, 2020')
+        self.new_pitch = Pitch('Valarie Rono','pickup-lines','I must be in a museum, because you truly are a work of art.','September 3rd, 2020')
 
     def test_instance(self):
-        self.assertTrue(isinstance(self.new_movie,Movie))
+        self.assertTrue(isinstance(self.new_pitch,Pitch))
 
 
 if __name__ == '__main__':
