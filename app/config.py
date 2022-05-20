@@ -4,7 +4,7 @@ class Config:
     '''
     pass
 
-
+    SECRET_KEY
 
 class ProdConfig(Config):
     '''
